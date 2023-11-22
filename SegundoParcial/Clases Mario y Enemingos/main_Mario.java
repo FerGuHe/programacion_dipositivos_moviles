@@ -1,5 +1,6 @@
 import java.util*
 import kotlin.current.schedule
+        import Clases .
 
 fun main(){
         var mario = Mario()
