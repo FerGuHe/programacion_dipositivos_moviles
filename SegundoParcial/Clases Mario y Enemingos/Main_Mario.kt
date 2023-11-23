@@ -1,4 +1,25 @@
-class Mario(var vidas: Int = 3) {
+import kotlin.concurrent.schedule
+
+fun main() {
+    val mario = Mario()
+
+    mario.collision("pipe")
+    mario.collision("goomba")
+
+    for (i in 1..5) {
+        mario.collision("Goomba")
+        println("Te quedan ${mario.getLives()}")
+    }
+
+    /*
+    if (mario.isAlive) {
+        mario.collision("Goomba") // Corregí el typo en "Gooma" a "Goomba"
+        println("Te quedan ${mario.getLives()}")
+    }*/
+
+}
+
+class P10_Mario(var vidas: Int = 3) {
     init {
         println("It's me Mario") // se presenta al construirlo
     }
@@ -22,6 +43,9 @@ class Mario(var vidas: Int = 3) {
                 field = value
             }
         }
+
+    val isAlive: Boolean
+        get() = lives > 0
 
     private fun die() { // setter
         lives--

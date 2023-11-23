@@ -1,5 +1,3 @@
-import com.example.android_studio_practicas.Travel
-
 open class National(override val city: String) : Travel() {
 
     override val country= "Mexico"

@@ -1,5 +1,3 @@
-package com.example.android_studio_practicas
-
 abstract class Travel {
 
     abstract val country: String

@@ -1,9 +1,6 @@
-class Goomba (name: String, strenght: Int):  //clase hijo
-    Enemy(Goomba, 1){    //esto es para que no se tengaq que crear cada vez
+class P10_Goomba(name: String, strength: Int) : Enemy(name, strength) { // Clase hijo de Enemy
 
-        init{
-            println("iniciando subclase de $name")
-
-        }
+    init {
+        println("Iniciando subclase de $name")
     }
-
+}
